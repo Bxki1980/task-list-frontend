@@ -1,0 +1,30 @@
+/* contactMe.css */
+
+/* Contact Me Page Styles */
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contact-me-box {
+    width: 600px;
+    background: #0d2a3a;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.contact-me-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00abf0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.input-box textarea.input-field {
+    height: 150px;
+    resize: vertical;
+}

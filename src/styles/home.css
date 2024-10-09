@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #081b29;
+    color: #ededed;
+}
+
+.home{
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-content
+{
+    max-width: 600px;
+}
+
+.home-content h1
+{   position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3
+{   
+    position: relative;
+    font-weight: 32px;
+    font-weight: 700;
+    color: aqua;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.home-content p
+{   
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0px 40px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box
+{   
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 2;
+}
+
+.btn-box a 
+{   
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;   
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover
+{
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2)
+{
+    background: transparent;
+    color: #00abf0;
+}
+
+.btn-box a:nth-child(2):hover
+{
+    color:#081b29;
+}
+
+.btn-box a:nth-child(2)::before
+{
+    background: #00abf0;
+}
+
+.btn-box a::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background:#081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before
+{
+    width: 100%;
+
+}
+
+
+/* animation */
+@keyframes showRight{
+    100% {
+        width: 0;
+    }
+  }
+  
+  .user-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #00abf0; /* Aqua color matching your theme */
+    transition: color 0.3s ease;
+  }
+  
+  .user-icon:hover {
+    color: #00bff8; /* Slightly lighter on hover */
+  }
+

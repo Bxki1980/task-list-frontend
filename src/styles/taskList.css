@@ -1,0 +1,217 @@
+/* taskList.css */
+
+/* Import Google Font (if not already imported in global.css) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Global Styles */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Task List Container */
+.task-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: #081b29;
+    color: #ededed;
+    min-height: 100vh;
+}
+
+/* Tools Section */
+.tools {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.tools .searchbox {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.searchbox input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: #0d2a3a;
+    color: #00abf0;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.searchbox input:focus {
+    background-color: #0c1e28;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Actions Buttons */
+.tools .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 12px 20px;
+    background-color: #00abf0;
+    color: #081b29;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.actions button:hover {
+    background-color: #00bff8;
+    transform: scale(1.05);
+}
+
+.actions button:disabled {
+    background-color: #5f9ea0;
+    cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+    color: red;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Tasks Section */
+.tasks {
+    width: 80%;
+    background: #0d2a3a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Task Table */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.task-table th,
+.task-table td {
+    padding: 14px 18px;
+    border: 1px solid #0d2a3a;
+    background: #081b29;
+    color: #ededed;
+}
+
+.task-table th {
+    background-color: #0c1e28;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.task-table tr:nth-child(even) {
+    background-color: #0d2a3a;
+}
+
+.task-table tr:hover {
+    background-color: #0c1e28;
+    cursor: pointer;
+}
+
+/* Edit Form and Create Form */
+.edit-form,
+.create-form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #0d2a3a;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    color: #ededed;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+.edit-form h3,
+.create-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00abf0;
+    font-size: 22px;
+}
+
+.edit-form label,
+.create-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #00abf0;
+}
+
+.edit-form input,
+.create-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #081b29;
+    color: #ededed;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.edit-form input:focus,
+.create-form input:focus {
+    background-color: #0c1e28;
+}
+
+.edit-form button,
+.create-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00abf0;
+    color: #081b29;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.edit-form button:hover,
+.create-form button:hover {
+    background-color: #00bff8;
+}
+
+.edit-form button[type='button'],
+.create-form button[type='button'] {
+    background-color: #f05454;
+    color: #ededed;
+}
+
+.edit-form button[type='button']:hover,
+.create-form button[type='button']:hover {
+    background-color: #f37676;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
